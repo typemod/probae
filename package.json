@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-basic-pnpm",
+  "name": "vvft",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@types/prettier": "2.6.0",
     "prettier": "latest",
     "turbo": "latest"
   }
