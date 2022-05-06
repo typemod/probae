@@ -1,11 +1,11 @@
 import { red, bold, green } from "colorette";
 
 /**
- * AssertionError is thrown whenever an assertion inside an expect call fails.
+ * ExpectError is thrown whenever an assertion inside an expect call fails.
  *
  * @param opts.message {String} The message to be displayed when the assertion fails.
  */
-export default class AssertionError extends Error {
+export default class ExpectError extends Error {
 	constructor(
 		opts: {
 			message: string | undefined;
@@ -15,7 +15,7 @@ export default class AssertionError extends Error {
 	) {
 		super(opts.message ?? "Assertion failed");
 
-		this.name = "AssertionError";
+		this.name = "ExpectError";
 
 		let refrence = opts.refrence.split("\n");
 		let value = opts.value.split("\n");

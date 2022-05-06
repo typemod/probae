@@ -1,4 +1,4 @@
-import AssertionError from '../src/AssertionError';
+import ExpectError from '../src/ExpectError'
 
 import { test } from 'uvu';
 import * as assert from "uvu/assert"
@@ -7,7 +7,7 @@ import * as assert from "uvu/assert"
 
 test("gotta do this", () => {
 	assert.throws(() => {
-		throw new AssertionError({ message: "Expected this to be true" });
+		throw new ExpectError({ message: "Expected this to be true" });
 	})
 })
 
