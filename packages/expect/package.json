@@ -1,5 +1,6 @@
 {
   "name": "@vvft/expect",
+  "private": false,
   "version": "1.0.0",
   "description": "A speedy expect library!",
   "main": "dist/index.js",
