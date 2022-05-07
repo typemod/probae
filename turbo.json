@@ -7,7 +7,7 @@
     "test": {
 		"dependsOn": ["build"]
     },
-	"publish": {
+	"prepublish": {
 		"dependsOn": ["build", "test"]
 	}
   }

@@ -1,5 +1,9 @@
 name: Tests
-on: [pull_request]
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    types: [opened, synchronize]
 jobs:
   size:
     runs-on: ${{ matrix.os }}

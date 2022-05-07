@@ -1,44 +1,64 @@
 import ExpectError from './ExpectError'
-import { dequal } from 'dequal';
+import { dequal } from 'dequal'
 
 export default class ExpectObject {
-	assertRefrence: any;
-	flipped: boolean = false;
+	assertRefrence: any
+	flipped: boolean = false
 
 	constructor(assertRefrence: any) {
-		this.assertRefrence = assertRefrence;
+		this.assertRefrence = assertRefrence
 	}
 
+	// TODO: Make it so that ExpectObject#not only flips the return.
 	not(): ExpectObject {
-		this.flipped = !this.flipped;
-		return this;
+		const clone = Object.assign(
+			Object.create(Object.getPrototypeOf(this)),
+			this
+		)
+		clone.flipped = !clone.flipped
+		return clone
 	}
 
 	anything(): void {
-		if (!!this.assertRefrence === this.flipped) throw new ExpectError({ message: `Expected ${this.assertRefrence} to be anything` });
+		if (!!this.assertRefrence === this.flipped)
+			throw new ExpectError({
+				message: `Expected ${this.assertRefrence} to be anything`,
+			})
 	}
 
 	toBe(value: any): void {
-		let equal = dequal(this.assertRefrence, value);
+		let equal = dequal(this.assertRefrence, value)
 
-		if (equal === this.flipped) throw new ExpectError({ message: `Expected ${this.assertRefrence} to be ${value}` });
+		if (equal === this.flipped)
+			throw new ExpectError({
+				message: `Expected ${this.assertRefrence} to be ${value}`,
+			})
 	}
 
 	toBeType(type: string): void {
-		if ((typeof this.assertRefrence === type) === this.flipped) throw new ExpectError({ message: `Expected ${this.assertRefrence} to be ${type}` });
+		if ((typeof this.assertRefrence === type) === this.flipped)
+			throw new ExpectError({
+				message: `Expected ${this.assertRefrence} to be ${type}`,
+			})
 	}
 
 	toThrow(): void {
-		if (typeof this.assertRefrence !== "function") throw new TypeError("Expected a function");
+		if (typeof this.assertRefrence !== 'function')
+			throw new TypeError('Expected a function')
 
-		let thrown = false;
+		let thrown = false
 
 		try {
-			this.assertRefrence();
+			this.assertRefrence()
 		} catch (e) {
-			thrown = true;
+			thrown = true
 		}
 
-		if (thrown === this.flipped) throw new ExpectError({ message: `Expected ${this.assertRefrence} ${this.flipped ? "not ": ""}to throw` });
+		if (thrown === this.flipped)
+			throw new ExpectError({
+				message: `Expected ${this.assertRefrence} ${
+					this.flipped ? 'not ' : ''
+				}to throw`,
+			})
 	}
 }
