@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-	"prepublishOnly": "turbo run prepublish && pnpm -r publish",
+    "prepublishOnly": "turbo run prepublish && pnpm -r publish --access public --no-git-checks",
     "build": "turbo run build",
-	"test": "turbo run test --parallel",
+    "test": "turbo run test --parallel",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -14,5 +14,8 @@
     "@types/prettier": "2.6.0",
     "prettier": "latest",
     "turbo": "latest"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.22.0"
   }
 }
