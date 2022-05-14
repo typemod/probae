@@ -3,8 +3,6 @@ import ExpectObject from '../src/ExpectObject'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-// TODO: Write actual tests
-
 test('ExpectObject#toBe', () => {
 	new ExpectObject('test').toBe('test')
 	new ExpectObject('test').not().toBe("testn't")
