@@ -1,21 +1,26 @@
 {
-  "name": "vvft",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "prepublishOnly": "turbo run prepublish && pnpm -r publish --access public --no-git-checks",
-    "build": "turbo run build",
-    "test": "turbo run test --parallel",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "@types/prettier": "2.6.0",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "dependencies": {
-    "@changesets/cli": "^2.22.0"
-  }
+	"name": "vvft",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"preinstall": "only-allow pnpm",
+		"prepublishOnly": "turbo run prepublish && pnpm -r publish --access public --no-git-checks",
+		"build": "turbo run build --parallel",
+		"test": "turbo run test --parallel",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.33",
+		"@types/prettier": "2.6.0",
+		"only-allow": "^1.1.0",
+		"prettier": "latest",
+		"ts-node": "^10.7.0",
+		"turbo": "latest",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"@changesets/cli": "^2.22.0"
+	}
 }
