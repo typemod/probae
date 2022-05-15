@@ -10,7 +10,7 @@
 		"test": "uvu -r ts-node/register tests"
 	},
 	"keywords": [
-		"assert",
+		"server",
 		"test"
 	],
 	"author": "TypeMod Labs",
