@@ -1,5 +1,5 @@
 {
-	"name": "@vvft/serve",
+	"name": "@promenade/serve",
 	"version": "1.0.0",
 	"description": "🧪🌈 A speedy micro-server library for testing!",
 	"main": "dist/index.js",

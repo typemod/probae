@@ -1,4 +1,4 @@
-# @vvft/expect
+# @promenade/expect
 
 ## 1.0.0
 

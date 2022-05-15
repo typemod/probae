@@ -1,4 +1,4 @@
-# @vvft/serve
+# @promenade/serve
 
 ## 1.0.0
 

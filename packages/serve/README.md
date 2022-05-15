@@ -1,6 +1,6 @@
-# @vvft/serve ✨🧪✨
+# @promenade/serve ✨🧪✨
 
-`@vvft/serve` is a toolkit for making basic HTTP servers for testing.
+`@promenade/serve` is a toolkit for making basic HTTP servers for testing.
 
 - 📈 Simple 1-function API!
 - ⚡ No-friction greased-lightning speed!
@@ -10,7 +10,7 @@
 ## Example
 
 ```typescript
-import serve from "@vvft/serve"
+import serve from "@promenade/serve"
 
 const { url, test, close } = serve({
 	'/': {

@@ -1,5 +1,5 @@
 {
-	"name": "@vvft/expect",
+	"name": "@promenade/expect",
 	"version": "1.0.0",
 	"description": "🧪🌈 A speedy micro-assert library for testing!",
 	"main": "dist/index.js",

@@ -1,6 +1,6 @@
-# @vvft/expect ✨🧪✨
+# @promenade/expect ✨🧪✨
 
-`@vvft/expect` is a package for simple assertions!
+`@promenade/expect` is a package for simple assertions!
 
 - 📈 Simple 1-function API!
 - ⚡ No-friction greased-lightning speed!
@@ -10,7 +10,7 @@
 ## Example
 
 ```typescript
-import expect from "@vvft/expect"
+import expect from "@promenade/expect"
 
 expect("test").toBe("test")
 
