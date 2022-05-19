@@ -1,0 +1,24 @@
+{
+	"name": "@promenade/inject",
+	"version": "1.0.0",
+	"description": "🧪🌈 An unorthodox fakes library!",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsup src/index.ts --dts --format esm,cjs --minify",
+		"test": "uvu -r ts-node/register tests"
+	},
+	"keywords": [
+		"inject",
+		"test"
+	],
+	"author": "TypeMod Labs",
+	"license": "Unlicense",
+	"devDependencies": {
+		"@types/node": "^17.0.33",
+		"tsup": "^5.12.6",
+		"typescript": "^4.6.4",
+		"uvu": "^0.5.3"
+	}
+}

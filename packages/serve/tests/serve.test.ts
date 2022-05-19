@@ -6,12 +6,15 @@ import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
 test('serve', () => {
-	const { url, test, close } = serve({
-		'/': {
-			handler: () => 'hello!',
-			tests: { once: true }
+	const { url, test, close } = serve(
+		{
+			'/': {
+				handler: () => 'hello!',
+				tests: { once: true },
+			},
 		},
-	}, { port: 8082 })
+		{ port: 8082 }
+	)
 
 	assert.equal(url, 'http://localhost:8082')
 	assert.type(test, 'function')
