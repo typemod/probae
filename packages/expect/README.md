@@ -1,6 +1,6 @@
-# @promenade/expect ✨🧪✨
+# @probae/expect ✨🧪✨
 
-`@promenade/expect` is a package for simple assertions!
+`@probae/expect` is a package for simple assertions!
 
 -   📈 Simple 1-function API!
 -   ⚡ No-friction greased-lightning speed!
@@ -10,7 +10,7 @@
 ## Example
 
 ```typescript
-import expect from '@promenade/expect'
+import expect from '@probae/expect'
 
 expect('test').toBe('test')
 

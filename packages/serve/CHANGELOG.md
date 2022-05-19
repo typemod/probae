@@ -1,4 +1,4 @@
-# @promenade/serve
+# @probae/serve
 
 ## 1.0.0
 

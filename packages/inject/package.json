@@ -1,5 +1,5 @@
 {
-	"name": "@promenade/inject",
+	"name": "@probae/inject",
 	"version": "1.0.0",
 	"description": "🧪🌈 An unorthodox fakes library!",
 	"main": "dist/index.js",
